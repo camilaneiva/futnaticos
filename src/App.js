@@ -1,5 +1,11 @@
+import { ClubSymbol } from './components/ClubSymbol'
+
 function App() {
-  return <></>
+  return (
+    <>
+      <ClubSymbol />
+    </>
+  )
 }
 
 export default App
