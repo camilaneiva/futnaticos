@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SymbolWrapper = styled.div`
-  background: red;
+  background: white;
   width: 165px;
   height: 165px;
   border-radius: 50%;
@@ -9,7 +9,4 @@ export const SymbolWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 15px;
-`
-export const SymbolImage = styled.img`
-  max-width: 100%;
 `
