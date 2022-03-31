@@ -1,9 +1,9 @@
-import { ClubSymbol } from './components/ClubSymbol'
+import { Menu } from './components/Menu'
 
 function App() {
   return (
     <>
-      <ClubSymbol />
+      <Menu />
     </>
   )
 }
