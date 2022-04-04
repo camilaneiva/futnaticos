@@ -1,11 +1,11 @@
+import { ThemeProvider } from 'styled-components'
 import { Menu } from './components/Menu'
+import { theme } from './design-system/theme'
 
-function App() {
+export const App = () => {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Menu />
-    </>
+    </ThemeProvider>
   )
 }
-
-export default App
