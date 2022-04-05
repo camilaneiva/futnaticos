@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Wrapper = styled.div`
   display: flex;
-  gap: 4px;
+  gap: ${({ theme }) => theme.spacing(1)};
 `
 
 export const IconCheck = styled(FontAwesomeIcon)`

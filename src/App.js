@@ -3,7 +3,7 @@ import { theme } from './design-system/theme'
 import { Menu } from './components/Menu'
 import { Table } from './components/Table'
 
-function App() {
+export const App = () => {
   return (
     <ThemeProvider theme={theme}>
       {/* <Menu /> */}
@@ -11,5 +11,3 @@ function App() {
     </ThemeProvider>
   )
 }
-
-export default App
