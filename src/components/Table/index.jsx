@@ -1,10 +1,8 @@
 import React from 'react'
 import { TableRow } from '../TableRow'
-import clubSymbol from '../../imgs/symbol.svg'
 import { Th, Tr } from './style'
 
 export const Table = ({ data }) => {
-  console.log(data)
   return (
     <>
       <table>
@@ -26,9 +24,10 @@ export const Table = ({ data }) => {
           </Tr>
         </thead>
         <tbody>
-          {data.map((team) => {
+          {data.map((team, index) => {
             return (
               <TableRow
+                key={index}
                 club={team.club}
                 results={team.results}
                 position={team.position}
