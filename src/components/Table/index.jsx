@@ -1,11 +1,11 @@
 import React from 'react'
 import { TableRow } from '../TableRow'
-import { Th, Tr } from './style'
+import { Th, Tr, TableWrapper } from './style'
 
 export const Table = ({ data }) => {
   return (
     <>
-      <table>
+      <TableWrapper>
         <thead>
           <Tr>
             <Th>&nbsp;</Th>
@@ -44,7 +44,7 @@ export const Table = ({ data }) => {
             )
           })}
         </tbody>
-      </table>
+      </TableWrapper>
     </>
   )
 }
