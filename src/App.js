@@ -1,4 +1,6 @@
 import { ThemeProvider } from 'styled-components'
+import { MatchCard } from './components/MatchCard'
+import { Menu } from './components/Menu'
 import { theme } from './design-system/theme'
 import { Menu } from './components/Menu'
 import { Table } from './components/Table'
@@ -25,7 +27,7 @@ export const App = () => {
   return (
     <ThemeProvider theme={theme}>
       {/* <Menu /> */}
-      <Table data={tableData} />
+      <MatchCard />
     </ThemeProvider>
   )
 }
