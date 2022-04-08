@@ -2,14 +2,20 @@ import React from 'react'
 import { ClubSymbol } from '../ClubSymbol'
 import { Title, Subtitle, Wrapper, Text } from './style'
 
-export const ClubCard = () => {
+export const ClubCard = ({
+  clubSymbol,
+  club,
+  championship,
+  position,
+  points
+}) => {
   return (
     <Wrapper>
-      <ClubSymbol />
-      <Title>Manchester United</Title>
-      <Subtitle>Premier League</Subtitle>
+      <ClubSymbol clubSymbol={clubSymbol} />
+      <Title>{club}</Title>
+      <Subtitle>{championship}</Subtitle>
       <Text>
-        <span>6°</span>lugar - <span>50</span> pontos
+        <span>{position}º</span> lugar - <span>{points}</span> pontos
       </Text>
     </Wrapper>
   )

@@ -1,8 +1,7 @@
 import React from 'react'
 import { SymbolWrapper } from './style'
-import clubSymbol from '../../imgs/symbol.svg'
 
-export const ClubSymbol = () => {
+export const ClubSymbol = ({ clubSymbol }) => {
   return (
     <div>
       <SymbolWrapper>
