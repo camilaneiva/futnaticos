@@ -3,6 +3,9 @@ import styled from 'styled-components'
 export const Wrapper = styled.tr`
   color: #282525;
   border-bottom: 1px solid #e5e5e5;
+  &:last-child {
+    border-bottom: none;
+  }
 `
 
 export const Cell = styled.td`
