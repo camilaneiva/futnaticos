@@ -52,6 +52,7 @@ export const Score = styled.span`
     size ?? theme.typography.highlight.fontSize};
   line-height: ${({ theme }) => theme.typography.highlight.lineHeight};
   color: ${({ color }) => color ?? '#282525'};
+  width: 14px;
 `
 export const FixtureInfo = styled.span`
   font-weight: bold;

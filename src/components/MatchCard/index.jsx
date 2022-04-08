@@ -1,4 +1,5 @@
 import React from 'react'
+import { splitScore } from '../../logic/splitScore'
 import {
   Wrapper,
   WrapperCard,
@@ -10,34 +11,42 @@ import {
   Score,
   FixtureInfo
 } from './style'
-import clubSymbol from '../../imgs/symbol.svg'
-import clubSymbol2 from '../../imgs/totte.png'
 
-export const MatchCard = () => {
+export const MatchCard = ({
+  date,
+  place,
+  time,
+  homeClub,
+  awayClub,
+  homeSymbol,
+  awaySymbol,
+  score
+}) => {
+  const [homeScore, awayScore] = splitScore(score)
   return (
     <Wrapper>
       <Fixture>
-        <FixtureInfo>02/04</FixtureInfo> - Goodison Park -{' '}
-        <FixtureInfo>13:30</FixtureInfo>
+        <FixtureInfo>{date}</FixtureInfo> - {place}
+        <FixtureInfo> {time ?? ''}</FixtureInfo>
       </Fixture>
       <WrapperCard>
-        <Club>MUN</Club>
+        <Club>{homeClub}</Club>
 
         <ImageWrapper>
-          <Image src={clubSymbol} alt="" />
+          <Image src={homeSymbol} alt="" />
         </ImageWrapper>
         <Scoreboard>
-          <Score>2</Score>
+          <Score>{homeScore}</Score>
           <Score size={'20px'} color={'#c5c5c5'}>
             ×
           </Score>
-          <Score>1</Score>
+          <Score>{awayScore}</Score>
         </Scoreboard>
 
         <ImageWrapper>
-          <Image src={clubSymbol2} alt="" />
+          <Image src={awaySymbol} alt="" />
         </ImageWrapper>
-        <Club>LEI</Club>
+        <Club>{awayClub}</Club>
       </WrapperCard>
     </Wrapper>
   )
