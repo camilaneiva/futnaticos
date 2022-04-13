@@ -7,289 +7,11 @@ import clubSymbol2 from './imgs/totte.png'
 import { Layout } from './components/Layout'
 import { NextMatch } from './components/NextMatch'
 import { LastMatches } from './components/LastMatches'
-
-const tableData = [
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  },
-  {
-    club: 'Manchester United',
-    results: ['l', 'w', 'w', 'w', 'd'],
-    position: 1,
-    points: 50,
-    played: 29,
-    won: 14,
-    drawn: 8,
-    lost: 7,
-    goalsFor: 48,
-    goalsAgainst: 40,
-    goalsDifference: 8,
-    clubSymbol: clubSymbol
-  }
-]
+import { useEffect } from 'react'
+import { useState } from 'react'
+import { getTable } from './requests/getTable'
+import { Oval } from 'react-loader-spinner'
+import './App.css'
 
 const nextMatch = {
   date: '02/04',
@@ -340,11 +62,33 @@ const cardInfo = {
 }
 
 export const App = () => {
+  const [tableData, setTableData] = useState(
+    JSON.parse(localStorage.getItem('tabela')) ?? null
+  )
+
+  useEffect(() => {
+    if (!tableData) {
+      getTable(setTableData)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (tableData) {
+      localStorage.setItem('tabela', JSON.stringify(tableData))
+    }
+  }, [tableData])
+
   return (
     <ThemeProvider theme={theme}>
       <Layout>
         <Menu card={cardInfo} />
-        <Table data={tableData} />
+        <div className={'container'}>
+          {tableData ? (
+            <Table data={tableData} />
+          ) : (
+            <Oval height={50} color="#a5a5a5" secondaryColor="#c5c5c5" />
+          )}
+        </div>
         <div>
           <NextMatch match={nextMatch} />
           <LastMatches lastMatches={lastMatches} />

@@ -4,7 +4,6 @@ export const TableWrapper = styled.table`
   flex-grow: 1;
   border-left: 1px solid #e5e5e5;
   border: 1px solid #e5e5e5;
-  margin-left: 230px;
 `
 
 export const Tr = styled.tr`
