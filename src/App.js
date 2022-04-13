@@ -12,16 +12,7 @@ import { useState } from 'react'
 import { getTable } from './requests/getTable'
 import { Oval } from 'react-loader-spinner'
 import './App.css'
-
-const nextMatch = {
-  date: '02/04',
-  place: 'Goodison Park',
-  time: '13:30',
-  homeClub: 'MUN',
-  awayClub: 'TOT',
-  homeSymbol: clubSymbol,
-  awaySymbol: clubSymbol2
-}
+import { getNextMatch } from './requests/getNextMatch'
 
 const lastMatches = [
   {
@@ -63,7 +54,10 @@ const cardInfo = {
 
 export const App = () => {
   const [tableData, setTableData] = useState(
-    JSON.parse(localStorage.getItem('tabela')) ?? null
+    JSON.parse(localStorage.getItem('table')) ?? null
+  )
+  const [nextMatch, setNextMatch] = useState(
+    JSON.parse(localStorage.getItem('nextMatch')) ?? null
   )
 
   useEffect(() => {
@@ -74,9 +68,19 @@ export const App = () => {
 
   useEffect(() => {
     if (tableData) {
-      localStorage.setItem('tabela', JSON.stringify(tableData))
+      localStorage.setItem('table', JSON.stringify(tableData))
     }
   }, [tableData])
+
+  useEffect(() => {
+    getNextMatch(setNextMatch)
+  }, [])
+
+  useEffect(() => {
+    if (nextMatch) {
+      localStorage.setItem('nextMatch', JSON.stringify(nextMatch))
+    }
+  }, [nextMatch])
 
   return (
     <ThemeProvider theme={theme}>
@@ -90,7 +94,7 @@ export const App = () => {
           )}
         </div>
         <div>
-          <NextMatch match={nextMatch} />
+          {nextMatch && <NextMatch match={nextMatch} />}
           <LastMatches lastMatches={lastMatches} />
         </div>
       </Layout>
