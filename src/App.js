@@ -11,6 +11,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { getTable } from './requests/getTable'
 import { Oval } from 'react-loader-spinner'
+import './App.css'
 
 const nextMatch = {
   date: '02/04',
@@ -81,14 +82,7 @@ export const App = () => {
     <ThemeProvider theme={theme}>
       <Layout>
         <Menu card={cardInfo} />
-        <div
-          style={{
-            flexGrow: 1,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
+        <div className={'container'}>
           {tableData ? (
             <Table data={tableData} />
           ) : (
