@@ -4,7 +4,7 @@ import { Wrapper } from './style'
 
 export const Menu = ({ card }) => {
   return (
-    <Wrapper>
+    <Wrapper backgroundColor={card.clubColor}>
       <ClubCard
         club={card.club}
         championship={card.championship}

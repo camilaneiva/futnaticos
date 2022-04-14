@@ -13,6 +13,7 @@ import { getTable } from './requests/getTable'
 import { Oval } from 'react-loader-spinner'
 import './App.css'
 import { getNextMatch } from './requests/getNextMatch'
+import { getMenuInfo } from './requests/getMenuInfo'
 
 const lastMatches = [
   {
@@ -60,6 +61,8 @@ export const App = () => {
     JSON.parse(localStorage.getItem('nextMatch')) ?? null
   )
 
+  const [menu, setMenu] = useState(null)
+
   useEffect(() => {
     if (!tableData) {
       getTable(setTableData)
@@ -82,10 +85,15 @@ export const App = () => {
     }
   }, [nextMatch])
 
+  useEffect(() => {
+    getMenuInfo(setMenu)
+  }, [])
+
   return (
     <ThemeProvider theme={theme}>
       <Layout>
-        <Menu card={cardInfo} />
+        {menu && <Menu card={menu} />}
+
         <div className={'container'}>
           {tableData ? (
             <Table data={tableData} />
